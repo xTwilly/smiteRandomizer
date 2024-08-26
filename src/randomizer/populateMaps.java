@@ -5,11 +5,23 @@ import java.util.HashMap;
 import java.util.Iterator;
 
 public class populateMaps {
+	//creating all the HashMaps that correlate with the various roles within the game. Will be used to find each randomly selected character
+	public static HashMap<Integer, godClass> fullGodList = new HashMap<Integer, godClass>();
+	public static HashMap<Integer, godClass> assassinList = new HashMap<Integer, godClass>();
+	public static HashMap<Integer, godClass> warriorList = new HashMap<Integer, godClass>();
+	public static HashMap<Integer, godClass> guardianList = new HashMap<Integer, godClass>();
+	public static HashMap<Integer, godClass> mageList = new HashMap<Integer, godClass>();
+	public static HashMap<Integer, godClass> hunterList = new HashMap<Integer, godClass>();
 	
+	public static HashMap<Integer, godClass> soloList = new HashMap<Integer, godClass>();
+	public static HashMap<Integer, godClass> midList = new HashMap<Integer, godClass>();
+	public static HashMap<Integer, godClass> jungleList = new HashMap<Integer, godClass>();
+	public static HashMap<Integer, godClass> adcList = new HashMap<Integer, godClass>();
+	public static HashMap<Integer, godClass> supportList = new HashMap<Integer, godClass>();
 public static void populate() {
 	//map of every character, with assigned numbers for eventually randomization
-	HashMap<Integer, godClass> fullGodList = new HashMap<Integer, godClass>();
-	//creates an object of each character, then places them within the map so each object's traits can be accessed
+
+	//creates a godClass object of each character in the game, and immediately assigns their traits. Then adds them to the largest list, the one that contains every character
 	//role, damage, game class
 	godClass achilles = new godClass("Solo", "Physical", "Warrior", "Achilles");
 	fullGodList.put(1, achilles);
@@ -276,7 +288,7 @@ public static void populate() {
 	//Iterator it = fgl.iterator();
 	
 	//setting up a group for randomizing assassins
-	HashMap<Integer, godClass> assassinList = new HashMap<Integer, godClass>();
+	//HashMap<Integer, godClass> assassinList = new HashMap<Integer, godClass>();
 	assassinList.put(1, arachne);
 	assassinList.put(2, baka);
 	assassinList.put(3, bastet);
@@ -303,7 +315,7 @@ public static void populate() {
 	assassinList.put(24, tsu);
 	
 	//setting up a group for randomizing junglers
-	HashMap<Integer, godClass> jungleList = new HashMap<Integer, godClass>();
+	//HashMap<Integer, godClass> jungleList = new HashMap<Integer, godClass>();
 	jungleList.put(1, aokuang);
 	jungleList.put(2, arachne);
 	jungleList.put(3, baka);
@@ -353,7 +365,7 @@ public static void populate() {
 	jungleList.put(47, ymir);
 	
 	//setting up a group for adcs
-	HashMap<Integer, godClass> adcList = new HashMap<Integer, godClass>();
+	//HashMap<Integer, godClass> adcList = new HashMap<Integer, godClass>();
 	adcList.put(1, amc);
 	adcList.put(2, anhur);
 	adcList.put(3, apollo);
@@ -386,7 +398,7 @@ public static void populate() {
 	adcList.put(30, zhong);
 	
 	//setting up a group for hunters
-	HashMap<Integer, godClass> hunterList = new HashMap<Integer, godClass>();
+	//HashMap<Integer, godClass> hunterList = new HashMap<Integer, godClass>();
 	hunterList.put(1, amc);
 	hunterList.put(2, anhur);
 	hunterList.put(3, apollo);
@@ -413,7 +425,7 @@ public static void populate() {
 	hunterList.put(24, nut);
 	
 	//setting up a group for warriors
-	HashMap<Integer, godClass> warriorList = new HashMap<Integer, godClass>();
+	//HashMap<Integer, godClass> warriorList = new HashMap<Integer, godClass>();
 	warriorList.put(1, achilles);
 	warriorList.put(2, ama);
 	warriorList.put(3, bellona);
@@ -436,7 +448,7 @@ public static void populate() {
 	warriorList.put(20, vamana);
 	
 	//setting up a group for solos
-	HashMap<Integer, godClass> soloList = new HashMap<Integer, godClass>();
+	//HashMap<Integer, godClass> soloList = new HashMap<Integer, godClass>();
 	soloList.put(1, achilles);
 	soloList.put(2, ama);
 	soloList.put(3, bellona);
@@ -495,7 +507,7 @@ public static void populate() {
 	soloList.put(56, zhong);
 	
 	//setting a group for guardians
-	HashMap<Integer, godClass> guardianList = new HashMap<Integer, godClass>();
+	//HashMap<Integer, godClass> guardianList = new HashMap<Integer, godClass>();
 	guardianList.put(1, ares);
 	guardianList.put(2, artio);
 	guardianList.put(3, athena);
@@ -522,7 +534,7 @@ public static void populate() {
 	guardianList.put(24, ymir);
 	
 	//setting a  group for supports
-	HashMap<Integer, godClass> supportList = new HashMap<Integer, godClass>();
+	//HashMap<Integer, godClass> supportList = new HashMap<Integer, godClass>();
 	supportList.put(1, ares);
 	supportList.put(2, artio);
 	supportList.put(3, athena);
@@ -568,7 +580,7 @@ public static void populate() {
 	supportList.put(43, zhong);
 	
 	//setting a group for mages
-	HashMap<Integer, godClass> mageList = new HashMap<Integer, godClass>();
+	//HashMap<Integer, godClass> mageList = new HashMap<Integer, godClass>();
 	mageList.put(1, agni);
 	mageList.put(2, ahpuch);
 	mageList.put(3, anubis);
@@ -609,7 +621,7 @@ public static void populate() {
 	mageList.put(38, zhong);
 	
 	//setting a group for mid
-	HashMap<Integer, godClass> midList = new HashMap<Integer, godClass>();
+	//HashMap<Integer, godClass> midList = new HashMap<Integer, godClass>();
 	midList.put(1, agni);
 	midList.put(2, ahpuch);
 	midList.put(3, anubis);

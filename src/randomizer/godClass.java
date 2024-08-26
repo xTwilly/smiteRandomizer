@@ -18,6 +18,7 @@ public  class godClass{
     public godClass() {
     	super();
     }
+    //setters
     public void setRole(String newRole){
         this.role = newRole;
     }
@@ -30,7 +31,8 @@ public  class godClass{
     public void setName(String newName) {
     	this.name = newName;
     }
-
+    
+    //getters
     public String getRole(){
         return this.role;
     }
