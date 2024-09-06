@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Smite Game Randomizer </title>
+    <script defer src="godClassSite.js"  type="text/javascript" ></script> 
+    <!-- <script type="text/javascript" src="populateMapsSite.js"></script> -->
+    <!-- <script type="text/javascript" src="randomizerResultsSite.js"></script> -->
+    <script>
+           function loadRands(){
+            var bink = new godClass("a","b","c","d")
+            bink.populate()
+           }
+           function midReturn(){
+            var bink = new godClass("a","b","c","d")
+            var data = bink.randomizeMid()
+            document.getElementById("result").innerHTML = data
+           }
+           function adcReturn(){
+            var bink = new godClass("a","b","c","d")
+            var data = bink.randomizeADC()
+            document.getElementById("result").innerHTML = data
+           }
+           function supportReturn(){
+            var bink = new godClass("a","b","c","d")
+            var data = bink.randomizeSupport()
+            document.getElementById("result").innerHTML = data
+            }
+            function soloReturn(){
+            var bink = new godClass("a","b","c","d")
+            var data = bink.randomizeSolo()
+            document.getElementById("result").innerHTML = data
+            }
+            function jungleReturn(){
+            var bink = new godClass("a","b","c","d")
+            var data = bink.randomizeJungle()
+            document.getElementById("result").innerHTML = data
+            }
+
+            function mageReturn(){
+            var bink = new godClass("a","b","c","d")
+            var data = bink.randomizeMage()
+            document.getElementById("result").innerHTML = data
+            }
+
+            function hunterReturn(){
+            var bink = new godClass("a","b","c","d")
+            var data = bink.randomizeHunter()
+            document.getElementById("result").innerHTML = data
+            }
+
+            function warriorReturn(){
+            var bink = new godClass("a","b","c","d")
+            var data = bink.randomizeWarrior()
+            document.getElementById("result").innerHTML = data
+            }
+
+            function guardianReturn(){
+            var bink = new godClass("a","b","c","d")
+            var data = bink.randomizeGuardian()
+            document.getElementById("result").innerHTML = data
+            }
+
+            function assassinReturn(){
+            var bink = new godClass("a","b","c","d")
+            var data = bink.randomizeAssassin()
+            document.getElementById("result").innerHTML = data
+            }
+
+            function anyReturn(){
+            var bink = new godClass("a","b","c","d")
+            var data = bink.randomizeAll()
+            document.getElementById("result").innerHTML = data
+            }
+
+            
+
+
+    </script>
+</head>
+<body onload="loadRands()">
+    <header>
+        Twilly's Smite Game Randomizer
+    </header>
+
+    <p>
+        <input type="button" name="randAll" value="Randomize Any God!" onClick = "anyReturn()">
+    </p>
+
+    <p>
+        <input type="button" name="randMid" value="Randomize a Mid" onClick = "midReturn()">
+        <input type="button" name="randADC" value="Randomize a ADC" onClick = "adcReturn()">
+        <input type="button" name="randSupport" value="Randomize a Support" onClick = "supportReturn()">
+        <input type="button" name="randSolo" value="Randomize a Solo" onClick = "soloReturn()">
+        <input type="button" name="randJungle" value="Randomize a Jungle" onClick = "jungleReturn()">
+    </p>
+
+    <p>
+        <input type="button" name="randMage" value="Randomize a Mage" onClick = "mageReturn()">
+        <input type="button" name="randHunter" value="Randomize a Hunter" onClick = "hunterReturn()">
+        <input type="button" name="randAssassin" value="Randomize a Assassin" onClick = "assassinReturn()">
+        <input type="button" name="randWarrior" value="Randomize a Warrior" onClick = "warriorReturn()">
+        <input type="button" name="randGuardian" value="Randomize a Guardian" onClick = "guardianReturn()">
+    </p>
+
+    <p>Your Result is:</p>
+    <p id="result">
+
+    </p>
+</body>
+</html>
